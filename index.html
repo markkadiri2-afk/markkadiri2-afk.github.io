@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SkyVault Solutions — We buy houses for cash in Dallas, TX. Get a fair cash offer within 24 hours. No fees, no commissions, no hassle." />
+  <meta property="og:title" content="SkyVault Solutions — We Buy Houses for Cash" />
+  <meta property="og:description" content="Trying to sell your house? Get a no-obligation cash offer today. We close on your timeline." />
+  <meta property="og:type" content="website" />
+  <title>SkyVault Solutions — We Buy Houses for Cash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0b1628;
+      --bg-2: #0f1e35;
+      --bg-card: rgba(255,255,255,0.04);
+      --bg-card-hover: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.08);
+      --border-hover: rgba(255,255,255,0.18);
+      --blue: #2563eb;
+      --blue-light: #3b82f6;
+      --white: #ffffff;
+      --gray: #8a99b0;
+      --gray-dim: #4a5568;
+      --text: #e2e8f0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 56px;
+      background: rgba(11, 22, 40, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-logo span { color: var(--blue); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--blue) !important;
+      color: var(--white) !important;
+      padding: 8px 18px;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--blue-light) !important; }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(37,99,235,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-status {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 48px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .hero-status .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: pulse 2s infinite;
+      margin-right: -16px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero-title {
+      font-size: clamp(52px, 8vw, 110px);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .hero-title span { color: var(--blue); }
+
+    .hero-sub {
+      font-size: clamp(14px, 1.8vw, 18px);
+      color: var(--gray);
+      max-width: 520px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      padding: 14px 28px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--blue-light); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 14px 28px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--border-hover);
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--white); }
+
+    /* ─── TICKER ─── */
+    .ticker-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 56px;
+      white-space: nowrap;
+      animation: ticker 28s linear infinite;
+    }
+
+    .ticker-track span {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      padding: 120px 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 64px;
+    }
+
+    /* ─── CARDS GRID ─── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .card {
+      background: var(--bg);
+      padding: 36px 32px;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .card:hover { background: var(--bg-card-hover); }
+
+    .card-tag {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .card-icon {
+      color: var(--blue);
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    /* ─── COMPARISON ─── */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      margin-top: 0;
+    }
+
+    .compare-col {
+      background: var(--bg);
+      padding: 40px 36px;
+    }
+    .compare-col.featured { background: var(--bg-2); }
+
+    .compare-col-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .compare-col.featured .compare-col-label { color: var(--blue-light); }
+
+    .compare-col h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 32px;
+    }
+
+    .compare-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .compare-list li {
+      font-size: 14px;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .compare-list li .check { color: #22c55e; font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .compare-list li .cross { color: #ef4444; font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+    /* ─── PROCESS / HOW IT WORKS ─── */
+    .process-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .process-item {
+      background: var(--bg);
+      padding: 40px 36px;
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 24px;
+      transition: background 0.2s;
+    }
+    .process-item:hover { background: var(--bg-card-hover); }
+
+    .process-num {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--gray);
+      padding-top: 4px;
+    }
+
+    .process-content h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .process-content p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.65;
+      max-width: 640px;
+    }
+
+    /* ─── ABOUT / STORY ─── */
+    .story-content {
+      max-width: 720px;
+    }
+
+    .story-headline {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 28px;
+      line-height: 1.3;
+    }
+
+    .story-body p {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .story-philosophy {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .story-philosophy .phil-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+
+    .story-philosophy blockquote {
+      font-size: 16px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ─── CONTACT ─── */
+    #contact {
+      background: var(--bg-2);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-info h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .contact-info p {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .contact-detail-item .icon {
+      width: 36px; height: 36px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      padding: 14px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--blue); }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-group select option { background: var(--bg-2); }
+
+    .consent-text {
+      font-size: 12px;
+      color: var(--gray-dim);
+      line-height: 1.6;
+    }
+    .consent-text a { color: var(--gray); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      padding: 40px 48px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .footer-logo span { color: var(--blue); }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      font-size: 11px;
+      color: var(--gray);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ─── FLOATING CTA ─── */
+    .floating-cta {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 99;
+      background: var(--blue);
+      color: var(--white);
+      padding: 14px 24px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(37,99,235,0.4);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .floating-cta:hover { background: var(--blue-light); transform: translateY(-2px); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      #hero { padding: 0 24px 60px; }
+      section { padding: 80px 24px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+      .floating-cta { bottom: 20px; right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">SKY<span>VAULT</span></a>
+    <ul class="nav-links">
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#process">How It Works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get My Offer</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" style="border-top: none;">
+    <div class="hero-status">
+      <span class="dot"></span>
+      <span>Status: Active &nbsp;&nbsp; Dallas, TX &nbsp;&nbsp; Buying Now</span>
+    </div>
+    <h1 class="hero-title">SKYVAULT<br><span>SOLUTIONS</span></h1>
+    <p class="hero-sub">The better way to sell real estate. We're buying 5–7 homes this month — all cash, no commissions, no hassle. Get a fair offer in 24 hours.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Get My Cash Offer</a>
+      <a href="#process" class="btn-outline">How It Works</a>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>Cash Offers</span>
+      <span>No Commissions</span>
+      <span>No Showings</span>
+      <span>Fast Close</span>
+      <span>Dallas TX</span>
+      <span>Fair Offers</span>
+      <span>All Cash</span>
+      <span>No Repairs</span>
+      <span>Zero Fees</span>
+      <span>You Choose Closing Date</span>
+      <span>Offer in 24 Hours</span>
+      <span>We Pay Closing Costs</span>
+      <!-- repeat -->
+      <span>Cash Offers</span>
+      <span>No Commissions</span>
+      <span>No Showings</span>
+      <span>Fast Close</span>
+      <span>Dallas TX</span>
+      <span>Fair Offers</span>
+      <span>All Cash</span>
+      <span>No Repairs</span>
+      <span>Zero Fees</span>
+      <span>You Choose Closing Date</span>
+      <span>Offer in 24 Hours</span>
+      <span>We Pay Closing Costs</span>
+    </div>
+  </div>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <p class="section-label">Our Offer Program</p>
+    <h2 class="section-title">Benefits</h2>
+    <div class="cards-grid">
+
+      <div class="card">
+        <div class="card-tag">FAIR OFFER <div class="card-dot"></div></div>
+        <div class="card-icon">⏱</div>
+        <h3 class="card-title">Cash Offer Within 24 Hours</h3>
+        <p class="card-desc">Within 24 hours we'll provide you with a 100% guaranteed cash offer for your home — no gimmicks or surprises. What we offer is exactly what you receive at closing, with no fees or commissions.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">YOUR TIMELINE <div class="card-dot"></div></div>
+        <div class="card-icon">📅</div>
+        <h3 class="card-title">Pick Your Closing Date</h3>
+        <p class="card-desc">We cover all closing costs and pay in cash, so there's no need to deal with banks or lengthy approval processes. You choose the closing date that works best for you.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">HASSLE-FREE <div class="card-dot"></div></div>
+        <div class="card-icon">🔑</div>
+        <h3 class="card-title">Sell on Your Terms</h3>
+        <p class="card-desc">We buy your home directly, eliminating unnecessary showings and having your private space showcased online. Enjoy a hassle-free sale without the typical disruptions and stress.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">ZERO COST TO YOU <div class="card-dot"></div></div>
+        <div class="card-icon">💰</div>
+        <h3 class="card-title">We Pay All Closing Costs</h3>
+        <p class="card-desc">No hidden fees, no realtor commissions, no surprise deductions at the table. The number we offer is the number you walk away with. Period.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">AS-IS PURCHASE <div class="card-dot"></div></div>
+        <div class="card-icon">🔧</div>
+        <h3 class="card-title">We Cover Any Repairs</h3>
+        <p class="card-desc">Don't spend a dime fixing up your home before selling. We buy properties in any condition — we take it from there so you don't have to.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-tag">NO DELAYS <div class="card-dot"></div></div>
+        <div class="card-icon">⚡</div>
+        <h3 class="card-title">Quick &amp; Easy Process</h3>
+        <p class="card-desc">No months-long wait. No banks. No red tape. Our streamlined process is designed to get you from offer accepted to cash in hand in the fastest, most painless way possible.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY US / COMPARISON -->
+  <section id="why-us">
+    <p class="section-label">Side by Side</p>
+    <h2 class="section-title">Why Us</h2>
+    <div class="compare-grid">
+
+      <div class="compare-col featured">
+        <p class="compare-col-label">Our Cash Offer Program</p>
+        <h3>SkyVault Solutions</h3>
+        <ul class="compare-list">
+          <li><span class="check">✓</span> Competitive cash offer within 24 hours</li>
+          <li><span class="check">✓</span> No showings — no hassles</li>
+          <li><span class="check">✓</span> You choose your closing day</li>
+          <li><span class="check">✓</span> We pay ALL closing costs</li>
+          <li><span class="check">✓</span> Zero fees. Zero commissions</li>
+          <li><span class="check">✓</span> We'll cover any repairs</li>
+          <li><span class="check">✓</span> Close in as little as 7 days</li>
+        </ul>
+      </div>
+
+      <div class="compare-col">
+        <p class="compare-col-label">The Traditional Way</p>
+        <h3>Listing With an Agent</h3>
+        <ul class="compare-list">
+          <li><span class="cross">✗</span> The months it takes to sell add up</li>
+          <li><span class="cross">✗</span> Plenty of showings and disruption to your life</li>
+          <li><span class="cross">✗</span> It takes forever to close</li>
+          <li><span class="cross">✗</span> 1–2% in closing costs paid by you, the seller</li>
+          <li><span class="cross">✗</span> 6% realtor fees on the sales price</li>
+          <li><span class="cross">✗</span> You could be on the hook for repairs</li>
+          <li><span class="cross">✗</span> Uncertain timelines, delayed closings</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="process">
+    <p class="section-label">The Process</p>
+    <h2 class="section-title">How It Works</h2>
+    <div class="process-list">
+
+      <div class="process-item">
+        <div class="process-num">STEP_01</div>
+        <div class="process-content">
+          <h3>Tell Us About Your Property &amp; Goals</h3>
+          <p>Start by sharing key details about your property — condition, location, and any unique features. We'll also discuss your personal goals for selling, whether you need a quick sale, have a specific moving date, or are dealing with financial constraints. There's no obligation and no pressure.</p>
+        </div>
+      </div>
+
+      <div class="process-item">
+        <div class="process-num">STEP_02</div>
+        <div class="process-content">
+          <h3>Receive Your No-Obligation Cash Offer</h3>
+          <p>Within 24 hours, we'll present you with a no-obligation, all-cash offer tailored to your needs and based on market value and condition. The offer reflects the best possible terms for a smooth, hassle-free sale — what we offer is exactly what you receive at closing.</p>
+        </div>
+      </div>
+
+      <div class="process-item">
+        <div class="process-num">STEP_03</div>
+        <div class="process-content">
+          <h3>Accept &amp; Get Your Full Amount at Closing</h3>
+          <p>We handle all the paperwork and cover the closing costs. There are no hidden fees or commissions. You pick the closing date, we show up, and you walk away with exactly what was promised. It's that simple.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">Our Mission</p>
+    <h2 class="section-title">About</h2>
+    <div class="story-content">
+      <h3 class="story-headline">Dedicated to Reliable, Efficient Real Estate Solutions.</h3>
+      <div class="story-body">
+        <p>SkyVault Solutions was built on a simple belief: selling your home should be easier, faster, and far less stressful than the traditional process makes it. We work directly with Dallas homeowners who need a straightforward, honest path to selling their property.</p>
+        <p>We're not a listing service. We're not agents. We're real estate investors who make fair, all-cash offers and close on your schedule. Whether you're facing financial hardship, relocating, going through a life change, or simply don't want the headache of the traditional market — we're here to provide a solution that works for you.</p>
+        <p>Every deal we do is handled with integrity and professionalism. When we make you an offer, it's genuine — no bait-and-switch, no last-minute deductions, no games. We close with exactly the number we agreed on.</p>
+      </div>
+      <div class="story-philosophy">
+        <p class="phil-label">Our Promise</p>
+        <blockquote>"We Offer a Quick &amp; Easy Home Selling Experience and Guarantee the Easiest Home Selling Experience Ever."</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Get Started</p>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h3>Receive Your No-Obligation Cash Offer Today</h3>
+        <p>Ready to sell? Fill out the form or reach out directly. We respond quickly and there's zero pressure. You have nothing to lose by getting an offer.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-item">
+            <div class="icon">📞</div>
+            <span>(972) 573-9580</span>
+          </div>
+          <div class="contact-detail-item">
+            <div class="icon">✉️</div>
+            <span>info@skyvaultsolutions.com</span>
+          </div>
+          <div class="contact-detail-item">
+            <div class="icon">📍</div>
+            <span>Dallas, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="cf-name" placeholder="Your full name" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="cf-email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="cf-phone" placeholder="(555) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label>Property Address</label>
+          <input type="text" id="cf-address" placeholder="Street address, Dallas TX" />
+        </div>
+        <div class="form-group">
+          <label>Property Condition</label>
+          <select id="cf-condition">
+            <option value="">Select condition</option>
+            <option>Needs Major Repairs</option>
+            <option>Needs Minor Repairs</option>
+            <option>Good Condition</option>
+            <option>Excellent / Move-in Ready</option>
+          </select>
+        </div>
+        <p class="consent-text">By checking this box, you agree to receive text messages (e.g., payment reminders) from SkyVault Solutions at the cell number used when signing up. Consent is not a condition of any purchase. Reply STOP to unsubscribe, HELP for help. Message &amp; data rates may apply. Message frequency varies. I have read and agree with the <a href="https://skyvault-policy.com/terms" target="_blank" rel="noopener">Terms and Conditions</a> &amp; <a href="https://skyvault-policy.com/privacypolicy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        <a href="https://app.sterlingvertex.com/widget/survey/EziygX9LRlJvkQoM8b8Y" class="btn-primary" target="_blank" rel="noopener" style="text-align:center; display:block;">Get My Cash Offer →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#hero" class="footer-logo">SKY<span>VAULT</span> SOLUTIONS</a>
+    <p class="footer-copy">©2025 SkyVault Solutions · All Rights Reserved · Dallas, TX</p>
+    <div class="footer-links">
+      <a href="https://skyvault-policy.com/privacypolicy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://skyvault-policy.com/terms" target="_blank" rel="noopener">Terms of Service</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <a href="#contact" class="floating-cta">Get My Offer</a>
+
+  <script>
+    // Live clock in status bar
+    function updateTime() {
+      const el = document.querySelector('.hero-status span');
+      if (!el) return;
+      const now = new Date();
+      const t = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+      el.textContent = `Status: Active   ${t} Local   Buying Now`;
+    }
+    updateTime();
+    setInterval(updateTime, 30000);
+  </script>
+
+</body>
+</html>
